@@ -192,14 +192,14 @@ export class Charges extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="w-full h-screen bg-gray600">
         <ChargesTopBar pageName={this.state.pageName} />
-        <section>
-          <Sidebar />
-          <div>
+        <Sidebar />
+        <section className="w-10/12 mx-auto mt-16 bg-gray600 relative">
+          <div className="mb-4">
             <ChargesTypeWrapper charges={this.state.chargesType} />
-            <ChargesTable tableContent={ this.state.virtualCardCharges} />
           </div>
+          <ChargesTable tableContent={this.state.virtualCardCharges} />
         </section>
       </div>
     );

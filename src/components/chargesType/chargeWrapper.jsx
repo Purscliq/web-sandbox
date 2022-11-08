@@ -6,5 +6,5 @@ export default function ChargesTypeWrapper(props) {
   let unit_charge = charges.map(charge => {
     return <Charge key={charge.id} type={charge.type} />;
   });
-  return <ul>{unit_charge}</ul>;
+  return <ul className="w-full flex justify-between text-primary">{unit_charge}</ul>;
 }

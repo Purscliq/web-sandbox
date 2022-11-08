@@ -4,13 +4,13 @@ import { IoMdNotifications } from "react-icons/io";
 export default function ChargesTopBar(props) {
   return (
     <div>
-      <div className="relative z-10 flex-shrink-0 flex h-16 bg-white text-primary shadow">
+      <div className="w-screen flex-shrink-0 flex h-16 bg-blackPearl shadow fixed top-0 left-0 z-10">
         <div className="flex-1 px-4 flex justify-between">
           <div className="flex">
-            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-white">
+            <div className="flex items-center h-16 flex-shrink-0 px-4">
               <img className="h-8 w-auto" src={Logo} alt="Workflow" />
             </div>
-                      <p>{ props.pageName}</p>
+            <p className="text-primary text-2xl mx-7 my-4">{props.pageName}</p>
           </div>
 
           <div className="ml-4 flex items-center md:ml-6">

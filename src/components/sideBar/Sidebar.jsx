@@ -21,24 +21,22 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className="flex flex-col overflow-y-auto shadow-lg bg-primary w-full"
+        className="flex flex-col overflow-y-auto shadow-lg bg-blackPearl w-full fixed left-0 top-61"
         style={{
           height: "93vh",
           width: isOpen ? "350px" : "70px",
           transition: "all 0.3s",
-        }}
-      >
+        }}>
         <div className=" flex flex-1 " style={{}}>
           <div className="flex-1 overflow-y-auto">
-            <nav className="relative flex-1 flex flex-col p-6 gap-4">
+            <nav className="relative flex-1 flex flex-col p-6 gap-4 ">
               <div
                 onClick={toggle}
-                className="cursor-pointer mb-4"
+                className=" cursor-pointer mb-4 text-electricIndigo hover:text-primary"
                 style={{
                   marginLeft: isOpen ? "90%" : "0",
                   transition: "all 0.3s",
-                }}
-              >
+                }}>
                 {isOpen ? (
                   <IoMdArrowDropleftCircle className="h-5 w-5" />
                 ) : (
@@ -47,8 +45,7 @@ export default function Sidebar() {
               </div>
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md"
-              >
+                className=" text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <MdDashboard className=" h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Dashboard
@@ -57,8 +54,7 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <MdAccountBalanceWallet className=" h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Account
@@ -67,40 +63,35 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <BsCreditCardFill className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>Card</span>
               </a>
 
               <a
                 href="/dashboard/users"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <FaUsers className=" h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>Users</span>
               </a>
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <MdAdminPanelSettings className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>Admin</span>
               </a>
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <TbListDetails className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>KYCs</span>
               </a>
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-                style={{ display: isOpen ? "flex" : "none" }}
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md "
+                style={{ display: isOpen ? "flex" : "none" }}>
                 <MdPayments className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Withdrawal
@@ -109,16 +100,14 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <BsBank className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>Loans</span>
               </a>
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <FaTasks className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Roles & Permissions
@@ -127,8 +116,7 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <BsPercent className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Charges
@@ -137,8 +125,7 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <MdEvent className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Events
@@ -147,8 +134,7 @@ export default function Sidebar() {
 
               <a
                 href="/dashboard"
-                className="text-lightBlack hover:text-secondary group gap-3 flex items-center text-sm font-semibold rounded-md "
-              >
+                className="text-electricIndigo hover:text-primary group gap-3 flex items-center text-sm font-semibold rounded-md ">
                 <MdNotificationsActive className="h-6 w-6" />
                 <span style={{ display: isOpen ? "flex" : "none" }}>
                   Notifications
