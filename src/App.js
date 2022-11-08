@@ -6,10 +6,8 @@ import {
   ResetPassword,
   SavePassword,
 } from "./pages";
-import {
-  Main,
-  Users,
-} from "./components";
+import { Main, Users } from "./components";
+import { Charges } from "./pages/charges";
 
 function App() {
   return (
@@ -17,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/charges" element={<Charges />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/save-password" element={<SavePassword />} />
