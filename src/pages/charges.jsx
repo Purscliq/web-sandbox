@@ -3,17 +3,18 @@ import ChargesTypeWrapper from "../components/chargesType/chargeWrapper";
 import ChargesTopBar from "../components/chargesType/chargesTopBar";
 import ChargesTable from "../components/chargesType/chargesTable";
 import { Sidebar } from "../components";
+import {Route, Routes} from "react-router-dom"
 
 export class Charges extends Component {
   state = {
     pageName: "Charges",
     chargesType: [
-      { type: "Virtual Card Charges", id: 1 },
-      { type: "Physical Charges", id: 2 },
-      { type: "Bill Payment", id: 3 },
-      { type: "Electricity Charges", id: 4 },
-      { type: "Gift Card Charges", id: 5 },
-      { type: "General Transaction Fee", id: 6 },
+      { type: "Virtual Card Charges", id: 1, name: "virtualcard" },
+      { type: "Physical Charges", id: 2, name: "physicalcharges" },
+      { type: "Bill Payment", id: 3, name: "billpayment" },
+      { type: "Electricity Charges", id: 4, name: "electricitycharges" },
+      { type: "Gift Card Charges", id: 5, name: "giftcards" },
+      { type: "General Transaction Fee", id: 6, name: "generaltransaction" },
     ],
     virtualCardCharges: [
       {
@@ -199,7 +200,40 @@ export class Charges extends Component {
           <div className="mb-4">
             <ChargesTypeWrapper charges={this.state.chargesType} />
           </div>
-          <ChargesTable tableContent={this.state.virtualCardCharges} />
+          <Routes>
+            <Route
+              path="physicalcharges"
+              element={
+                <ChargesTable tableContent={this.state.physicalCharges} />
+              }
+            />
+            <Route
+              path="virtualcard"
+              element={
+                <ChargesTable tableContent={this.state.virtualCardCharges} />
+              }
+            />
+            <Route
+              path="billpayment"
+              element={<ChargesTable tableContent={this.state.billPayment} />}
+            />
+            <Route
+              path="electricitycharges"
+              element={
+                <ChargesTable tableContent={this.state.electricityCharges} />
+              }
+            />
+            <Route
+              path="giftcards"
+              element={<ChargesTable tableContent={this.state.giftCards} />}
+            />
+            <Route
+              path="generaltransaction"
+              element={
+                <ChargesTable tableContent={this.state.generalTransactionFee} />
+              }
+            />
+          </Routes>
         </section>
       </div>
     );
