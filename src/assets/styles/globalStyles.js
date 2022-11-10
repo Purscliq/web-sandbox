@@ -41,8 +41,3 @@ export const tableStyles = {
 };
 
 export default styles;
-
-/*charges component styles*/
-// export const chargesStyles = {
-
-// }
