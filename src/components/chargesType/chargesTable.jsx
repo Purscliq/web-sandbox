@@ -1,10 +1,10 @@
 import React from "react";
 import ChargesTableContent from "./chargesTableContent";
-export default function ChargesTable(props) {
-  let chargesTableRow = [...props.tableContent];
-  let tableRow = chargesTableRow.map((row, rowIndex) => {
-    return <ChargesTableContent key={rowIndex} content={row} />;
-  });
+export default function ChargesTable({ tableData }) {
+  // let chargesTableRow = [...props.tableContent];
+  // let tableRow = chargesTableRow.map((row, rowIndex) => {
+  //   return <ChargesTableContent key={rowIndex} content={row} />;
+  // });
 
   return (
     <div>
@@ -35,7 +35,15 @@ export default function ChargesTable(props) {
           </tr>
         </thead>
         <tbody className="bg-slate-300 divide-y divide-gray-200">
-          {tableRow}
+          {
+            tableData?.map((data, dataIndex) => (
+              // <tr key={i}>
+              //   <td>{data.email}</td>
+              // </tr>
+              <ChargesTableContent key={dataIndex} content={data} />
+
+            ))
+          }
         </tbody>
       </table>
     </div>
