@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import TableData from "./tableData";
- function ChargesTableContent(props) {
+import { ChargesTableContentPropType } from "../../types/PropTypesValidation";
+function ChargesTableContent(props) {
   let tableContent = { ...props.content };
 
   return (
@@ -19,15 +20,7 @@ import TableData from "./tableData";
 
 /*props validation commence*/
 ChargesTableContent.propTypes = {
-  content: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.number.isRequired,
-    creationFee: PropTypes.number.isRequired,
-    transactFee: PropTypes.number.isRequired,
-    monthlyFee: PropTypes.number.isRequired,
-    purchaseFee: PropTypes.number.isRequired,
-  }),
+  content: PropTypes.shape(ChargesTableContentPropType),
 };
 
 export default ChargesTableContent;
