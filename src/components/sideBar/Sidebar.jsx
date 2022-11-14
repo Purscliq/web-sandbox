@@ -21,7 +21,7 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className="flex flex-col overflow-y-auto shadow-lg bg-blackPearl w-full fixed left-0 top-61 z-10"
+        className="flex flex-col shadow-lg bg-blackPearl"
         style={{
           height: "93vh",
           width: isOpen ? "350px" : "70px",

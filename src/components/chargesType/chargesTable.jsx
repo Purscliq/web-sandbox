@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ChargesTableContent from "./chargesTableContent";
 export default function ChargesTable({ tableData }) {
+
   return (
-    <div>
+    <div className="">
       <table className="w-full bg-tableBg">
         <thead className="text-left p-4">
           <tr className=" text-primary">
